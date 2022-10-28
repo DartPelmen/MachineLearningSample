@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             if(activityResult.resultCode == RESULT_OK) {
                 val image = activityResult?.data?.extras?.get("data") as Bitmap
                 val labeler:ImageLabeler = ImageLabeling.getClient(ImageLabelerOptions.DEFAULT_OPTIONS)
-                val inputImage = InputImage-.fromBitmap(image,0)
+                val inputImage = InputImage.fromBitmap(image,0)
                 val recognizer:TextRecognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
                 binding.imageView.setImageBitmap(image)
 
